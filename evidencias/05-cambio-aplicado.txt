@@ -1,0 +1,24 @@
+﻿Detectado y aplicado en 88 s
+NAME     SYNC STATUS   HEALTH STATUS
+webapp   Synced        Healthy
+NAME                            READY   UP-TO-DATE   AVAILABLE   AGE    CONTAINERS   IMAGES              SELECTOR
+deployment.apps/webapp-webapp   4/4     4            4           2m2s   nginx        nginx:1.28-alpine   app.kubernetes.io/instance=webapp,app.kubernetes.io/name=webapp
+
+NAME                    TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE    SELECTOR
+service/webapp-webapp   NodePort   10.96.91.148   <none>        80:30080/TCP   2m2s   app.kubernetes.io/instance=webapp,app.kubernetes.io/name=webapp
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>GitOps con Helm y Argo CD</title>
+</head>
+<body style="font-family: sans-serif; text-align: center; margin-top: 10%;">
+  <h1>GitOps con Helm y Argo CD</h1>
+  <p>Version 2 - desplegado automaticamente desde Git</p>
+  <p>Imagen: nginx:1.28-alpine | Replicas: 4</p>
+</body>
+</html>
+
+
+

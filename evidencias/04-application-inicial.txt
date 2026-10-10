@@ -1,0 +1,11 @@
+﻿NAME     SYNC STATUS   HEALTH STATUS
+webapp   Synced        Healthy
+NAME                            READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES              SELECTOR
+deployment.apps/webapp-webapp   2/2     2            2           4s    nginx        nginx:1.27-alpine   app.kubernetes.io/instance=webapp,app.kubernetes.io/name=webapp
+
+NAME                    TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE   SELECTOR
+service/webapp-webapp   NodePort   10.96.91.148   <none>        80:30080/TCP   4s    app.kubernetes.io/instance=webapp,app.kubernetes.io/name=webapp
+
+NAME                               READY   STATUS    RESTARTS   AGE   IP            NODE                   NOMINATED NODE   READINESS GATES
+pod/webapp-webapp-d44bbb85-hhrft   1/1     Running   0          4s    10.244.0.14   gitops-control-plane   <none>           <none>
+pod/webapp-webapp-d44bbb85-lct2f   1/1     Running   0          4s    10.244.0.15   gitops-control-plane   <none>           <none>
