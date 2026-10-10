@@ -1,8 +1,8 @@
-replicaCount: 4
+replicaCount: 2
 
 image:
   repository: nginx
-  tag: "1.28-alpine"
+  tag: "1.27-alpine"
   pullPolicy: IfNotPresent
 
 service:
@@ -13,7 +13,7 @@ service:
 # Contenido servido por nginx (se inyecta mediante un ConfigMap)
 web:
   title: "GitOps con Helm y Argo CD"
-  message: "Version 2 - desplegado automaticamente desde Git"
+  message: "Version 1 - desplegado automaticamente desde Git"
 
 resources:
   requests:
