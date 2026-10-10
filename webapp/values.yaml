@@ -1,0 +1,24 @@
+replicaCount: 2
+
+image:
+  repository: nginx
+  tag: "1.27-alpine"
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 80
+  nodePort: 30080
+
+# Contenido servido por nginx (se inyecta mediante un ConfigMap)
+web:
+  title: "GitOps con Helm y Argo CD"
+  message: "Version 1 - desplegado automaticamente desde Git"
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 32Mi
+  limits:
+    cpu: 200m
+    memory: 128Mi

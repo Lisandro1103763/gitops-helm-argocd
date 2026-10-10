@@ -1,0 +1,19 @@
+﻿NAME: prueba
+LAST DEPLOYED: Sat Oct 10 12:14:19 2026
+NAMESPACE: prueba
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+NAME                            READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/prueba-webapp   2/2     2            2           25s
+
+NAME                    TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+service/prueba-webapp   NodePort   10.96.125.197   <none>        80:30080/TCP   25s
+
+NAME                           DATA   AGE
+configmap/kube-root-ca.crt     1      25s
+configmap/prueba-webapp-html   1      25s
+
+NAME                                 READY   STATUS    RESTARTS   AGE
+pod/prueba-webapp-5d6d478f5c-gdvm6   1/1     Running   0          25s
+pod/prueba-webapp-5d6d478f5c-rw49r   1/1     Running   0          25s

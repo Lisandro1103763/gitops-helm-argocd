@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "webapp.fullname" . }}-html
+  labels:
+    {{- include "webapp.labels" . | nindent 4 }}
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+      <meta charset="utf-8">
+      <title>{{ .Values.web.title }}</title>
+    </head>
+    <body style="font-family: sans-serif; text-align: center; margin-top: 10%;">
+      <h1>{{ .Values.web.title }}</h1>
+      <p>{{ .Values.web.message }}</p>
+      <p>Imagen: {{ .Values.image.repository }}:{{ .Values.image.tag }} | Replicas: {{ .Values.replicaCount }}</p>
+    </body>
+    </html>

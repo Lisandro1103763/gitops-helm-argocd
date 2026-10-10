@@ -1,0 +1,16 @@
+# Valores para el chart oficial argo/argo-cd (entorno local con Kind)
+server:
+  service:
+    type: NodePort
+    nodePortHttp: 30081
+    nodePortHttps: 30443
+
+configs:
+  cm:
+    # Cada cuanto Argo CD consulta el repositorio Git (por defecto 180s)
+    timeout.reconciliation: 60s
+
+dex:
+  enabled: false
+notifications:
+  enabled: false

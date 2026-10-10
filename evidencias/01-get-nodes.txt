@@ -1,0 +1,2 @@
+﻿NAME                   STATUS   ROLES           AGE   VERSION
+gitops-control-plane   Ready    control-plane   35s   v1.37.0
